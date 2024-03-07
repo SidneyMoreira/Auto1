@@ -30,9 +30,8 @@ jobs:
   - bash:  robot --pythonpath . -x outputxunit.xml TestCases.robot
     displayName: 'Run Robot Scripts'
   - task: PublishTestResults@2
+    condition: succeededOrFailed()
     inputs:
       testResultsFiles: outputxunit.xml
       searchFolder: 'D:\a\1\s\'
       testRunTitle: 'Publish Test Results outputxunit.xml'
-
-    
