@@ -13,8 +13,8 @@ jobs:
     vmImage: 'windows-latest'
   strategy:
     matrix:
-      Python37:
-        python.version: '3.12.2'
+      Python38:
+        python.version: '3.8.2'
     maxParallel: 1
 
   steps:
@@ -23,7 +23,7 @@ jobs:
       versionSpec: '$(python.version)'
       architecture: 'x64'
 
-  - script: pip install robotframework==5.0.1 robotframework-seleniumlibrary==6.0.0 && pip install selenium==4.9.0
+  - script: pip install robotframework==6.0.2 robotframework-seleniumlibrary==6.1.0 robotframework-pythonlibcore==4.1.2 && pip install selenium==4.10.0
     displayName: 'Install dependencies'
   - bash:  robot --pythonpath . -x outputxunit.xml TestCases.robot
     displayName: 'Run Robot Scripts'
