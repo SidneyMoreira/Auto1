@@ -39,19 +39,19 @@ Open URL Locally
     Maximize Browser Window
 
 Open URL AutoHero
-    Go To    https://www.autohero.com/
+    Go To    https://www.autohero.com/de/search/
 
 User is on Advanced Search Page
     Sleep   5s
-    Click Element                       //button[contains(text(),'Erweiterte Suche')]
-    Wait Until Element Is Visible       //span[contains(text(),'Erstzulassung ab')]
+    Click Element                       //button[contains(text(),'Erstzulassung')]
+    Wait Until Element Is Visible       //span[contains(text(),'Ab')]
 
 User Select Filter for First registration
-    Click Element                        //span[contains(text(),'Erstzulassung ab')]
+    Click Element                        //span[contains(text(),'Ab')]
     Wait Until Element Is Visible        //select[@name='yearRange.min']/*[text()='2014']   
     Click Element                        //select[@name='yearRange.min']/*[text()='2014']
     Sleep   3s
-    Click Element                        //a[contains(text(),'Ergebnisse')]
+    #Click Element                        //a[contains(text(),'Ergebnisse')]
 
 Verify all cars are filtered by first registration
 
