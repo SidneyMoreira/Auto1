@@ -18,12 +18,13 @@ jobs:
     maxParallel: 1
 
   steps:
+  
   - task: UsePythonVersion@0
     inputs:
       versionSpec: '$(python.version)'
       architecture: 'x64'
 
-  - script: pip install robotframework==6.0.2 robotframework-seleniumlibrary==6.1.0 robotframework-pythonlibcore==4.1.2 && pip install selenium==4.9.1
+  - script: pip install robotframework==6.0.2 robotframework-seleniumlibrary==6.1.0 robotframework-pythonlibcore==4.1.2 && npm install chromedriver --chromedriver-force-download --include_chromium --detect_chromedriver_version
     displayName: 'Install dependencies'
   - bash:  robot --pythonpath . -x outputxunit.xml TestCases.robot
     displayName: 'Run Robot Scripts'
