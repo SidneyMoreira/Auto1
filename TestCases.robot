@@ -35,7 +35,7 @@ Open URL Locally
     #Create Webdriver    Chrome    executable_path=D:/a/1/s/node_modules/chromedriver/lib/chromedriver/chromedriver.exe
     
     # Open Browser on Local Machine
-    # Open Browser    https://www.autohero.com/de/search/    chrome
+    Open Browser    https://www.autohero.com/de/search/    chrome
     Maximize Browser Window
 
 Open URL AutoHero
