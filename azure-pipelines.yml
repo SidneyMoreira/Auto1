@@ -23,7 +23,7 @@ jobs:
       versionSpec: '$(python.version)'
       architecture: 'x64'
 
-  - script: pip install robotframework==6.0.2 robotframework-seleniumlibrary==6.1.0 robotframework-pythonlibcore==4.1.2 && pip install selenium==4.10.0
+  - script: pip install robotframework==6.0.2 robotframework-seleniumlibrary==6.1.0 robotframework-pythonlibcore==4.1.2 && pip install chromedriver
     displayName: 'Install dependencies'
   - bash:  robot --pythonpath . -x outputxunit.xml TestCases.robot
     displayName: 'Run Robot Scripts'
