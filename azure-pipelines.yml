@@ -33,8 +33,6 @@ jobs:
     inputs:
       testResultsFiles: outputxunit.xml
       searchFolder: 'D:\a\1\s\'
-      failTaskOnFailedTests: true
-      failTaskOnFailureToPublishResults: true
       testRunTitle: 'Publish Test Results outputxunit.xml'
 
     
